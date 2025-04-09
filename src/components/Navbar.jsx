@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate,Link } from "react-router-dom";
 import { GiFilmSpool,  } from "react-icons/gi";
 import { FaSearch } from "react-icons/fa";
 
@@ -16,7 +16,11 @@ const Navbar = () => {
 
     return (
         <nav className="bg-gray-800 p-4 flex justify-between items-center">
-            <h1 className="text-xl font-bold"> <GiFilmSpool/> <span>MovieFlix</span> </h1>
+            <Link
+                to="/"
+                className="text-xl font-bold">    
+                 <GiFilmSpool /> <span>MovieFlix</span>
+            </Link>
             <form onSubmit={handleSubmit} className="flex">
                 <input
                     type="text"
